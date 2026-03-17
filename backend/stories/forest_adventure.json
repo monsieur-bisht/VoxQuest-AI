@@ -1,0 +1,187 @@
+{
+  "story_id": "forest_adventure",
+  "title": "The Forest of Whispers",
+  "start_node": "start",
+  "nodes": {
+    "start": {
+      "node_id": "start",
+      "narration": "You stand at the edge of the Whispering Forest, torch in hand. Ancient trees tower above you, their gnarled branches forming a canopy that blocks the moon. A narrow path splits before you — one leading deeper into shadow, the other toward a faint orange glow. Somewhere in the darkness, a twig snaps.",
+      "emotional_tone": "mysterious",
+      "choices": [
+        {"choice_id": "go_left", "text": "Take the shadowy path", "consequence_preview": "Venture into darkness"},
+        {"choice_id": "go_right", "text": "Head toward the light", "consequence_preview": "Seek warmth and safety"},
+        {"choice_id": "wait", "text": "Stand still and listen", "consequence_preview": "Be cautious"}
+      ],
+      "effects": {}
+    },
+    "go_left": {
+      "node_id": "go_left",
+      "narration": "You plunge into the shadow-draped path. Bioluminescent mushrooms line the trail, casting a cold blue glow. After several minutes, you discover a crumbling stone altar covered in glowing runes. Atop it rests an ancient amulet. A ghostly voice warns: 'Take it and face the curse, or leave it and seek the hermit's wisdom.'",
+      "emotional_tone": "eerie",
+      "choices": [
+        {"choice_id": "take_amulet", "text": "Take the amulet", "consequence_preview": "Gain power, risk a curse"},
+        {"choice_id": "find_hermit", "text": "Search for the hermit", "consequence_preview": "Seek guidance"}
+      ],
+      "effects": {}
+    },
+    "go_right": {
+      "node_id": "go_right",
+      "narration": "You follow the warm light and emerge into a small clearing where a campfire crackles. A weathered traveler sits whittling a branch, one eye watching you carefully. 'Sit,' she says. 'The forest has teeth tonight. I'm Maren — and you look like you need allies more than courage.' She offers you dried meat and information.",
+      "emotional_tone": "warm",
+      "choices": [
+        {"choice_id": "accept_help", "text": "Accept her offer and talk", "consequence_preview": "Gain an ally"},
+        {"choice_id": "decline_help", "text": "Thank her and press on alone", "consequence_preview": "Stay independent"}
+      ],
+      "effects": {"relationship_score": 10}
+    },
+    "wait": {
+      "node_id": "wait",
+      "narration": "You extinguish your torch and hold your breath. Eyes adjust to moonlight filtering through branches. A deer steps onto the path, followed by a cloaked figure who does not notice you. The figure mutters a map reference under their breath before slipping left down the shadowy trail. You've learned something — if you can catch them.",
+      "emotional_tone": "tense",
+      "choices": [
+        {"choice_id": "follow_figure", "text": "Follow the cloaked figure", "consequence_preview": "Discover their secret"},
+        {"choice_id": "go_right", "text": "Head toward the firelight instead", "consequence_preview": "Seek the campfire"}
+      ],
+      "effects": {}
+    },
+    "take_amulet": {
+      "node_id": "take_amulet",
+      "narration": "You grasp the amulet. Power surges through your veins — and so does cold dread. The runes burn into your palm, then fade. You feel stronger, but shadows seem to follow you now. The amulet pulses warmly in your hand. Ahead, through tangled roots, you glimpse the roof of a stone tower.",
+      "emotional_tone": "powerful",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Approach the stone tower", "consequence_preview": "Face what lies within"},
+        {"choice_id": "find_hermit", "text": "Find the hermit to break the curse", "consequence_preview": "Seek a cure"}
+      ],
+      "effects": {"inventory_add": "ancient amulet", "health": -10}
+    },
+    "find_hermit": {
+      "node_id": "find_hermit",
+      "narration": "You wind deeper into the forest until firelight flickers through the trees. A hunched hermit tends a cauldron, dozens of small charms hanging from the boughs. He turns before you speak: 'I knew you'd come. The forest told me.' He can help you — but his price is a riddle answered honestly.",
+      "emotional_tone": "mystical",
+      "choices": [
+        {"choice_id": "answer_riddle", "text": "Answer the hermit's riddle", "consequence_preview": "Win wisdom or be humbled"},
+        {"choice_id": "offer_trade", "text": "Offer something from your pack", "consequence_preview": "Trade for help"}
+      ],
+      "effects": {}
+    },
+    "accept_help": {
+      "node_id": "accept_help",
+      "narration": "Maren shares vital knowledge — the forest is under a creeping shadow curse, and its heart lies in a sunken tower to the north. She sketches a rough map and hands you a flask of fire-oil. 'If you reach the cursed altar, pour this,' she says. 'But travel fast. The shadows grow teeth after midnight.'",
+      "emotional_tone": "hopeful",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Head north to the tower", "consequence_preview": "Confront the curse"},
+        {"choice_id": "rest_at_camp", "text": "Rest at the camp first", "consequence_preview": "Recover health"}
+      ],
+      "effects": {"inventory_add": "fire-oil flask", "relationship_score": 15}
+    },
+    "decline_help": {
+      "node_id": "decline_help",
+      "narration": "You press on alone into the dark. The forest grows denser and your torch gutters. You find a stone marker pointing north with a single carved word: RECKONING. Your path is set — courage or folly, only the forest will judge.",
+      "emotional_tone": "determined",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Follow the marker north", "consequence_preview": "Face the tower alone"},
+        {"choice_id": "go_back", "text": "Return to Maren after all", "consequence_preview": "Swallow your pride"}
+      ],
+      "effects": {}
+    },
+    "follow_figure": {
+      "node_id": "follow_figure",
+      "narration": "You shadow the cloaked figure through the twisting paths. They stop at a hidden door in a hillside, press a rune, and enter. You slip inside after them. The tunnel opens into a rebel hideout — maps, weapons, and wanted posters line the walls. A dozen faces turn toward you. Silence.",
+      "emotional_tone": "shocking",
+      "choices": [
+        {"choice_id": "join_rebels", "text": "Announce yourself as a friend", "consequence_preview": "Risk joining them"},
+        {"choice_id": "flee_hideout", "text": "Back away slowly and flee", "consequence_preview": "Escape undetected"}
+      ],
+      "effects": {}
+    },
+    "enter_tower": {
+      "node_id": "enter_tower",
+      "narration": "The tower looms from the earth like a broken fang. Its door stands open, as if expecting you. Inside, a spiral stair descends. At the bottom, a pulsing void-altar drains the light from the room. This is the source of the curse. You must destroy it — but how depends on what you carry.",
+      "emotional_tone": "dramatic",
+      "choices": [
+        {"choice_id": "use_fire_oil", "text": "Pour the fire-oil on the altar", "consequence_preview": "Only works if you have it"},
+        {"choice_id": "use_amulet_power", "text": "Channel the amulet's power", "consequence_preview": "Only works if you have it"},
+        {"choice_id": "smash_altar", "text": "Attack the altar directly", "consequence_preview": "Brute force — costly"}
+      ],
+      "effects": {}
+    },
+    "answer_riddle": {
+      "node_id": "answer_riddle",
+      "narration": "The hermit's riddle: 'I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?' You answer: 'An echo.' The hermit grins — three teeth, all gold. He grants you a charm of warding and the location of the cursed tower. 'You are ready,' he says.",
+      "emotional_tone": "triumphant",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Head to the cursed tower", "consequence_preview": "Face the final challenge"}
+      ],
+      "effects": {"inventory_add": "warding charm", "relationship_score": 20}
+    },
+    "offer_trade": {
+      "node_id": "offer_trade",
+      "narration": "You offer the hermit your rations. He accepts with a solemn nod and tells you where the cursed altar lies. 'The path is clear,' he says, 'but so is the danger. Go before moonrise, or the shadows will walk.' He presses a small vial of holy water into your hand.",
+      "emotional_tone": "solemn",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Head to the cursed tower", "consequence_preview": "Face the final challenge"}
+      ],
+      "effects": {"inventory_add": "holy water vial"}
+    },
+    "rest_at_camp": {
+      "node_id": "rest_at_camp",
+      "narration": "Maren keeps watch while you sleep by the fire. You wake refreshed, the dread of the forest seeming smaller in morning light. She has packed extra supplies for your journey. 'Remember,' she says, 'the curse feeds on fear. Don't give it any.' You feel ready.",
+      "emotional_tone": "peaceful",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Head north to the tower", "consequence_preview": "Confront the curse"}
+      ],
+      "effects": {"health": 30}
+    },
+    "go_back": {
+      "node_id": "go_back",
+      "narration": "You swallow your pride and return to Maren's camp. She doesn't mock you — just hands you the fire-oil without a word. Sometimes wisdom is knowing when to accept help. You set out together at dawn, stronger for the humility.",
+      "emotional_tone": "humble",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Head to the tower together", "consequence_preview": "Face the curse with an ally"}
+      ],
+      "effects": {"inventory_add": "fire-oil flask", "relationship_score": 10}
+    },
+    "join_rebels": {
+      "node_id": "join_rebels",
+      "narration": "The rebels lower their weapons when you explain you followed out of curiosity, not malice. Their leader, a scarred woman called Dara, studies you. 'We fight the shadow curse,' she says. 'The tower is our target tonight. Join us or step aside.' They know the layout of the tower inside and out.",
+      "emotional_tone": "urgent",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Join the rebels' assault on the tower", "consequence_preview": "Fight alongside allies"}
+      ],
+      "effects": {"relationship_score": 25, "inventory_add": "rebel sigil"}
+    },
+    "flee_hideout": {
+      "node_id": "flee_hideout",
+      "narration": "You back out of the tunnel and run. No one follows. Breathing hard in the cold forest air, you realize you now know the rebels exist — and they know someone was watching. You'll need to move fast before they find you. The tower marker still points north.",
+      "emotional_tone": "anxious",
+      "choices": [
+        {"choice_id": "enter_tower", "text": "Rush to the tower before the rebels", "consequence_preview": "Race against time"}
+      ],
+      "effects": {"health": -5}
+    },
+    "use_fire_oil": {
+      "node_id": "use_fire_oil",
+      "narration": "You uncork the flask and pour the fire-oil over the void-altar. The flame erupts with a sound like breaking ice. The altar screams — a sound that comes from nowhere and everywhere — then implodes into darkness. Silence. Light seeps back into the room. The forest's curse is broken. You emerge into dawn, a hero.",
+      "emotional_tone": "triumphant",
+      "choices": [],
+      "effects": {"health": 10},
+      "is_ending": true
+    },
+    "use_amulet_power": {
+      "node_id": "use_amulet_power",
+      "narration": "You hold the amulet aloft and let its stolen power flow outward. The curse recognizes its own magic and recoils — then collapses inward. The amulet crumbles to dust in your palm, its purpose fulfilled. The forest exhales around you. You leave the tower with empty hands but a full heart.",
+      "emotional_tone": "bittersweet",
+      "choices": [],
+      "effects": {"inventory_remove": "ancient amulet"},
+      "is_ending": true
+    },
+    "smash_altar": {
+      "node_id": "smash_altar",
+      "narration": "You hurl yourself at the altar with everything you have. Each blow sends shadow-fire back through your arms. The pain is immense — but so is your will. The altar cracks, then shatters. The curse breaks, but so does something in you. You limp from the tower into golden morning light, scarred but victorious.",
+      "emotional_tone": "painful",
+      "choices": [],
+      "effects": {"health": -40},
+      "is_ending": true
+    }
+  }
+}
