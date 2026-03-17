@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 import time
 import uuid
 from datetime import datetime, timezone
@@ -133,10 +134,11 @@ async def transcribe_audio(
     raw = await audio.read()
     size_hint = len(raw)
 
+    fallback_transcript = os.getenv("VOXQUEST_ASR_FALLBACK_TEXT", "Proceed to the next scene")
     if transcript_override:
         transcript = transcript_override.strip()
     else:
-        transcript = "Investigate the tower" if size_hint > 2000 else "Take the forest path"
+        transcript = fallback_transcript if size_hint > 0 else "Audio not detected"
 
     language_mode = detect_language_mode(transcript)
     confidence = max(0.4, min(0.98, 0.9 - (0.1 if noise_level == "high" else 0.0)))

@@ -21,7 +21,7 @@ VoxQuest-AI is a starter full-stack **voice-first RPG storytelling assistant** a
 
 ### Backend
 ```bash
-cd /home/runner/work/VoxQuest-AI/VoxQuest-AI/backend
+cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ uvicorn app.main:app --reload --port 8000
 
 ### Frontend
 ```bash
-cd /home/runner/work/VoxQuest-AI/VoxQuest-AI/frontend
+cd frontend
 npm install
 NEXT_PUBLIC_API_BASE=http://localhost:8000 npm run dev
 ```
@@ -48,7 +48,6 @@ Then open http://localhost:3000.
 
 ## Docker
 ```bash
-cd /home/runner/work/VoxQuest-AI/VoxQuest-AI
 docker compose up --build
 ```
 
@@ -57,7 +56,7 @@ docker compose up --build
 
 ## ML Utilities
 ```bash
-cd /home/runner/work/VoxQuest-AI/VoxQuest-AI/backend
+cd backend
 # Config-driven model switch starter
 cat ml_utils/model_config.json
 

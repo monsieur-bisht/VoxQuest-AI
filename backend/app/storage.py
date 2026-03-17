@@ -3,11 +3,12 @@ from __future__ import annotations
 import csv
 import io
 import json
+import os
 import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List
 
-DB_PATH = Path(__file__).resolve().parent.parent / "voxquest.db"
+DB_PATH = Path(os.getenv("VOXQUEST_DB_PATH", Path(__file__).resolve().parent.parent / "voxquest.db"))
 
 
 def get_connection() -> sqlite3.Connection:
