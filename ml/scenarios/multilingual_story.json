@@ -1,0 +1,223 @@
+{
+  "scenario_id": "jungle_quest_multilingual",
+  "title": "Jungle Quest / जंगल की खोज",
+  "description": "A bilingual Hindi-English adventure set deep in the Indian subcontinent jungle. Players make choices voiced in either language.",
+  "language_tags": ["en", "hi", "hi-en"],
+  "nodes": [
+    {
+      "node_id": "start",
+      "narration_en": "You stand at the edge of a dense jungle. The air smells of earth and rain. Aage kya hoga, yeh sirf aap decide karenge.",
+      "narration_hi": "आप एक घने जंगल के किनारे खड़े हैं। हवा में मिट्टी और बारिश की खुशबू है। आगे क्या होगा, यह सिर्फ आप decide करेंगे।",
+      "emotional_tone": "mysterious",
+      "choices": [
+        {
+          "choice_id": "enter_jungle",
+          "text_en": "Enter the jungle bravely",
+          "text_hi": "साहस के साथ जंगल में प्रवेश करें",
+          "next_node": "jungle_path"
+        },
+        {
+          "choice_id": "wait_dawn",
+          "text_en": "Wait for dawn before entering",
+          "text_hi": "प्रवेश से पहले भोर का इंतजार करें",
+          "next_node": "dawn_wait"
+        }
+      ]
+    },
+    {
+      "node_id": "jungle_path",
+      "narration_en": "You push through thick vines. Suddenly, the path splits. Ek taraf se paani ki awaaz aa rahi hai, doosri taraf se dhuaan dikh raha hai.",
+      "narration_hi": "आप घनी बेलों को धकेलते हुए आगे बढ़ते हैं। अचानक, रास्ता दो भागों में बँट जाता है। एक तरफ से पानी की आवाज आ रही है, दूसरी तरफ से धुआं दिख रहा है।",
+      "emotional_tone": "tense",
+      "choices": [
+        {
+          "choice_id": "follow_water",
+          "text_en": "Follow the sound of water",
+          "text_hi": "पानी की आवाज का पीछा करें",
+          "next_node": "river_bank"
+        },
+        {
+          "choice_id": "investigate_smoke",
+          "text_en": "Investigate the smoke",
+          "text_hi": "धुएं की जांच करें",
+          "next_node": "tribal_camp"
+        }
+      ]
+    },
+    {
+      "node_id": "dawn_wait",
+      "narration_en": "You rest by a large banyan tree. As the first light breaks, you notice strange markings on its bark. Yeh nishan kaafi purane lagte hain.",
+      "narration_hi": "आप एक बड़े बरगद के पेड़ के पास आराम करते हैं। जैसे ही पहली रोशनी आती है, आपको उसकी छाल पर अजीब निशान नजर आते हैं। ये निशान काफी पुराने लगते हैं।",
+      "emotional_tone": "curious",
+      "choices": [
+        {
+          "choice_id": "study_markings",
+          "text_en": "Study the ancient markings carefully",
+          "text_hi": "प्राचीन निशानों का ध्यान से अध्ययन करें",
+          "next_node": "ancient_map"
+        },
+        {
+          "choice_id": "enter_at_dawn",
+          "text_en": "Enter the jungle now that it is light",
+          "text_hi": "अब जंगल में प्रवेश करें क्योंकि रोशनी है",
+          "next_node": "jungle_path"
+        }
+      ]
+    },
+    {
+      "node_id": "river_bank",
+      "narration_en": "You reach a wide river. A small boat is tied to a tree. Across the river, you see the ruins of an old temple. Kya aap naav mein baithenge?",
+      "narration_hi": "आप एक चौड़ी नदी के किनारे पहुँचते हैं। एक पेड़ से छोटी नाव बंधी है। नदी के पार, आप एक पुराने मंदिर के खंडहर देखते हैं। क्या आप नाव में बैठेंगे?",
+      "emotional_tone": "adventurous",
+      "choices": [
+        {
+          "choice_id": "take_boat",
+          "text_en": "Take the boat across the river",
+          "text_hi": "नदी पार करने के लिए नाव लें",
+          "next_node": "temple_ruins"
+        },
+        {
+          "choice_id": "swim_across",
+          "text_en": "Swim across carefully",
+          "text_hi": "सावधानी से तैरकर पार करें",
+          "next_node": "hidden_cave"
+        }
+      ]
+    },
+    {
+      "node_id": "tribal_camp",
+      "narration_en": "You find a small tribal camp. An elder looks up and says, 'Aap yahan kyon aaye hain, outsider?' He holds a carved wooden staff.",
+      "narration_hi": "आपको एक छोटा जनजातीय शिविर मिलता है। एक बुजुर्ग ऊपर देखता है और कहता है, 'आप यहाँ क्यों आए हैं, बाहरी?' वह एक नक्काशीदार लकड़ी की छड़ी पकड़े हुए है।",
+      "emotional_tone": "cautious",
+      "choices": [
+        {
+          "choice_id": "greet_peacefully",
+          "text_en": "Greet the elder respectfully",
+          "text_hi": "बुजुर्ग को सम्मान से नमस्कार करें",
+          "next_node": "elder_wisdom"
+        },
+        {
+          "choice_id": "offer_gift",
+          "text_en": "Offer your water bottle as a gift",
+          "text_hi": "अपनी पानी की बोतल उपहार के रूप में दें",
+          "next_node": "tribe_alliance"
+        }
+      ]
+    },
+    {
+      "node_id": "ancient_map",
+      "narration_en": "The markings form a map! It shows a hidden treasure deep in the jungle. 'Yeh khazana bahut saalon se kisi ne nahi dekha,' you think to yourself.",
+      "narration_hi": "निशान एक नक्शा बनाते हैं! यह जंगल के अंदर एक छुपे खजाने को दिखाता है। 'यह खजाना बहुत सालों से किसी ने नहीं देखा,' आप सोचते हैं।",
+      "emotional_tone": "excited",
+      "choices": [
+        {
+          "choice_id": "follow_map",
+          "text_en": "Follow the map to find the treasure",
+          "text_hi": "खजाना खोजने के लिए नक्शे का पालन करें",
+          "next_node": "treasure_chamber"
+        },
+        {
+          "choice_id": "copy_map",
+          "text_en": "Copy the map and proceed carefully",
+          "text_hi": "नक्शा कॉपी करें और सावधानी से आगे बढ़ें",
+          "next_node": "jungle_path"
+        }
+      ]
+    },
+    {
+      "node_id": "temple_ruins",
+      "narration_en": "The temple is ancient and beautiful. Inside, you discover a sealed chamber. Darwaza khulne ka ek hi tarika hai — ek riddle solve karna hoga.",
+      "narration_hi": "मंदिर प्राचीन और सुंदर है। अंदर, आप एक बंद कक्ष खोजते हैं। दरवाजा खुलने का एक ही तरीका है — एक पहेली हल करनी होगी।",
+      "emotional_tone": "wonder",
+      "choices": [
+        {
+          "choice_id": "solve_riddle",
+          "text_en": "Attempt to solve the riddle",
+          "text_hi": "पहेली हल करने की कोशिश करें",
+          "next_node": "treasure_chamber"
+        },
+        {
+          "choice_id": "seek_help",
+          "text_en": "Go back and seek help from the tribe",
+          "text_hi": "वापस जाएं और जनजाति से मदद मांगें",
+          "next_node": "tribe_alliance"
+        }
+      ]
+    },
+    {
+      "node_id": "hidden_cave",
+      "narration_en": "While swimming, you spot an underwater cave entrance. Aap andar ghus jaate ho. The cave glows with blue bioluminescent moss.",
+      "narration_hi": "तैरते समय, आपको पानी के नीचे एक गुफा का प्रवेश द्वार दिखता है। आप अंदर घुस जाते हो। गुफा नीले बायोल्यूमिनेसेंट काई से चमकती है।",
+      "emotional_tone": "magical",
+      "choices": [
+        {
+          "choice_id": "explore_cave",
+          "text_en": "Explore the glowing cave further",
+          "text_hi": "चमकती गुफा को आगे explore करें",
+          "next_node": "treasure_chamber"
+        },
+        {
+          "choice_id": "exit_cave",
+          "text_en": "Exit and head to the temple ruins",
+          "text_hi": "बाहर निकलें और मंदिर के खंडहरों की ओर जाएं",
+          "next_node": "temple_ruins"
+        }
+      ]
+    },
+    {
+      "node_id": "elder_wisdom",
+      "narration_en": "The elder smiles. 'Bahut achha. Hum tumhari madad karenge.' He reveals that the jungle holds a sacred stone that grants clarity of mind.",
+      "narration_hi": "बुजुर्ग मुस्कुराते हैं। 'बहुत अच्छा। हम तुम्हारी मदद करेंगे।' वह बताते हैं कि जंगल में एक पवित्र पत्थर है जो मन की स्पष्टता प्रदान करता है।",
+      "emotional_tone": "hopeful",
+      "choices": [
+        {
+          "choice_id": "accept_guidance",
+          "text_en": "Accept the elder's guidance to find the stone",
+          "text_hi": "पत्थर खोजने के लिए बुजुर्ग का मार्गदर्शन स्वीकार करें",
+          "next_node": "treasure_chamber"
+        },
+        {
+          "choice_id": "thank_and_leave",
+          "text_en": "Thank the elder and explore alone",
+          "text_hi": "बुजुर्ग को धन्यवाद दें और अकेले explore करें",
+          "next_node": "river_bank"
+        }
+      ]
+    },
+    {
+      "node_id": "tribe_alliance",
+      "narration_en": "The tribe welcomes you as a friend. Together, you venture deep into the jungle. 'Yeh jungle sirf ek jagah nahi, yeh ek zindagi hai,' says a young warrior.",
+      "narration_hi": "जनजाति आपको मित्र के रूप में स्वागत करती है। मिलकर, आप जंगल में गहरे जाते हैं। 'यह जंगल सिर्फ एक जगह नहीं, यह एक जिंदगी है,' एक युवा योद्धा कहता है।",
+      "emotional_tone": "united",
+      "choices": [
+        {
+          "choice_id": "lead_expedition",
+          "text_en": "Lead the expedition to the treasure chamber",
+          "text_hi": "खजाना कक्ष तक अभियान का नेतृत्व करें",
+          "next_node": "treasure_chamber"
+        }
+      ]
+    },
+    {
+      "node_id": "treasure_chamber",
+      "narration_en": "You stand before a magnificent chamber filled with ancient artefacts and the sacred stone. 'Yeh khazana sirf dhan nahi, yeh gyaan hai.' You have completed your quest.",
+      "narration_hi": "आप प्राचीन कलाकृतियों और पवित्र पत्थर से भरे एक शानदार कक्ष के सामने खड़े हैं। 'यह खजाना सिर्फ धन नहीं, यह ज्ञान है।' आपने अपनी खोज पूरी कर ली है।",
+      "emotional_tone": "triumphant",
+      "choices": []
+    }
+  ],
+  "benchmark_phrases": [
+    {"text": "Enter the jungle bravely", "language": "en"},
+    {"text": "Wait for dawn before entering", "language": "en"},
+    {"text": "Follow the sound of water", "language": "en"},
+    {"text": "Take the boat across the river", "language": "en"},
+    {"text": "जंगल में प्रवेश करें", "language": "hi"},
+    {"text": "पानी की आवाज का पीछा करें", "language": "hi"},
+    {"text": "नदी पार करने के लिए नाव लें", "language": "hi"},
+    {"text": "बुजुर्ग को सम्मान से नमस्कार करें", "language": "hi"},
+    {"text": "Jungle mein enter karo", "language": "hi-en"},
+    {"text": "Naav se nadi paar karo", "language": "hi-en"},
+    {"text": "Buzurg se madad maango", "language": "hi-en"},
+    {"text": "Khazana dhundho andar jungle ke", "language": "hi-en"}
+  ]
+}
