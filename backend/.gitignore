@@ -1,0 +1,10 @@
+data/audio/
+data/sessions/
+data/dataset.json
+__pycache__/
+*.py[cod]
+.env
+*.egg-info/
+dist/
+build/
+.venv/
