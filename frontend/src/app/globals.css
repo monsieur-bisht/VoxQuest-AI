@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rpg-dark: #0a0a0f;
+  --rpg-surface: #13131a;
+  --rpg-border: #2a2a3a;
+  --rpg-accent: #d4a017;
+  --rpg-text: #e8e0d0;
+}
+
+html,
+body {
+  background-color: var(--rpg-dark);
+  color: var(--rpg-text);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--rpg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rpg-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rpg-accent);
+}
+
+/* ─── Typewriter animation ──────────────────────────────── */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ─── Fade-in ────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─── Slide-up ───────────────────────────────────────────── */
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ─── Waveform bar idle animation ───────────────────────── */
+@keyframes waveformIdle {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.waveform-bar {
+  animation: waveformIdle 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* ─── Recording pulse ───────────────────────────────────── */
+@keyframes recordPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(192, 57, 43, 0);
+  }
+}
+
+.recording-pulse {
+  animation: recordPulse 1.5s ease-out infinite;
+}
+
+/* ─── Smooth transitions ─────────────────────────────────── */
+* {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* except animations */
+canvas,
+[class*='animate-'] {
+  transition: none;
+}
+
+/* ─── RPG heading style ──────────────────────────────────── */
+.rpg-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #d4a017 0%, #f5c842 50%, #d4a017 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Panel style ────────────────────────────────────────── */
+.rpg-panel {
+  background-color: var(--rpg-surface);
+  border: 1px solid var(--rpg-border);
+  border-radius: 0.75rem;
+}
