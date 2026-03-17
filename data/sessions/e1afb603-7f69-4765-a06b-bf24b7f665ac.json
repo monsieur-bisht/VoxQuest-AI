@@ -1,0 +1,12 @@
+{
+  "session_id": "e1afb603-7f69-4765-a06b-bf24b7f665ac",
+  "current_node_id": "start",
+  "character_name": "Adventurer",
+  "health": 100,
+  "relationship_score": 50,
+  "inventory": [],
+  "visited_nodes": [
+    "start"
+  ],
+  "story_log": []
+}
